@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Let's hack!!</title>
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+</head>
+<body>
+    <h1>Let's purchase our company!!</h1>
+    {% if amount %}
+        <label>number of company you have: {{ amount }}</label>
+    {% endif %}
+    <form action="/purchase" method="POST">
+        <input type="submit" value="Purchase" class="btn btn-primary btn-large btn-block"/>
+    </form>
+</body>
+</html>
