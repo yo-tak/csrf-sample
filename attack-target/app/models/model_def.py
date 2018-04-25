@@ -13,11 +13,10 @@ class Purchases(db.Model):
 class Accounts(db.Model):
     __tablename__ = 'accounts'
     username = db.Column(db.String(40), primary_key=True)
-    password = db.Column(db.String(64))
+    password = db.Column(db.String(64))  # 64 to save hashed value in the future
 
     def __repr__(self):
         return '<Accounts username={username}'.format(username=self.username)
-    # ----------------------------------------------------------------------
 
 
 def init():
